@@ -6,11 +6,19 @@
 The worst time complexity of add handler is O(n).
 
 Suppose n is the number of level of the path.
-Both add and lookup the path have the same time complexity. 
 
+The time complexity of 'add_handle' is O(n).
 algorithms:
  - trim and split the path string by '/' into the array that holds each nodes, O(1)
- - add or lookup is guided by the node list one by one until the last one, O(n)
+ - follow the trie node by path nodes until get the end, O(n)
+ - hold the given handler in final trie node, O(1)
+
+The time complexity of 'lookup' is O(n).
+algorithms:
+ - translate the string of path into the node array of path, O(1)
+ - iterate every path nodes and follow the stored trie data, O(n)
+ - decide which handler (user's or not found) can be returned, O(1)
+
 
 ## Space complexity
 
