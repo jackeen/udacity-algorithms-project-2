@@ -12,8 +12,12 @@ def sqrt(n):
     
 	Returns:
        int: Floored Square Root
+	   None: If the input can not reach the requirement 
     """
 	
+	if n is None or n < 0:
+		return None
+
 	if n == 0 or n == 1:
 		return n
 
@@ -44,7 +48,10 @@ class Test:
 	def run(self, input):
 		self.count += 1
 
-		expected = math.floor(math.sqrt(input))
+		expected = None
+		if input is not None and input > 0:
+			expected = math.floor(math.sqrt(input))
+		
 		output = sqrt(input)
 
 		print('test {}, input: {}'.format(self.count, input))
@@ -66,6 +73,8 @@ test.run(0)
 test.run(16)
 test.run(1)
 test.run(27)
+test.run(-4)
+test.run(None)
 
 
 
