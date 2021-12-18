@@ -9,6 +9,7 @@ Suppose the characters of word is n.
 
 algorithms:
  - iterate every characters of given word until worn out letters, O(n)
+ - check and generate trie nodes for letters if there are not exist, O(n)
  - finishing the adding word by setting the sign of existed word, O(1)
 
 
@@ -23,10 +24,9 @@ costs O(n / 2), the collection suffix stage costs O(n / 2 * m).
 Therefore, the total cost is O(n * m). 
 
 algorithms:
- - iterate the input characters one by one, O(n)
- - find out every child of ending point in previous step, O(1)
- - iterate these children, O(m)
- - iterate every node until reach the word sign in each iteration of previous step, O(n)
+ - iterate the given prefix one by one until the trie node with last letter of the prefix, O(n)
+ - iterate the children of the last letter's trie node recursively, 
+   and record the word if it is existed, O(m * n)
 
 ## Space complexity
 

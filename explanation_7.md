@@ -9,15 +9,15 @@ Suppose n is the number of level of the path.
 
 The time complexity of 'add_handle' is O(n).
 algorithms:
- - trim and split the path string by '/' into the array that holds each nodes, O(1)
- - follow the trie node by path nodes until get the end, O(n)
- - hold the given handler in final trie node, O(1)
+ - translate the string of path into the trie node array of path, O(1)
+ - iterate the node array of path, and add the not existed route trie node, (n)
+ - assign the given handler to the relative property of the route trie node, O(1)
 
 The time complexity of 'lookup' is O(n).
 algorithms:
- - translate the string of path into the node array of path, O(1)
- - iterate every path nodes and follow the stored trie data, O(n)
- - decide which handler (user's or not found) can be returned, O(1)
+ - translate the string of path into the trie node array of path, O(1)
+ - iterate existed trie node based on the array of path as far as possible, O(n)
+ - check the trie node with last element of the array, and return the appropriate handler, O(1)
 
 
 ## Space complexity
