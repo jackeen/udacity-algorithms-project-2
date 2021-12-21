@@ -39,23 +39,31 @@ contained by others, so, it is father less then this evaluated result.
 > supposed n and m is similar to previous part
 
 'Trie' complexity
- - Method 1 'insert'  
+ - Method 1 '\_\_init\_\_'  
+   time complexity: O(1)  
+   space complexity: O(1)
+
+ - Method 2 'insert'  
    time complexity: O(n)  
    space complexity: O(1)
 
- - Method 2 'find'  
+ - Method 3 'find'  
    time complexity: O(n)  
    space complexity: O(1)
 
 'TrieNode' complexity
- - Method 1 'insert'  
+ - Method 1 '\_\_init\_\_'  
    time complexity: O(1)  
    space complexity: O(1)
 
- - Method 2 'suffixes'  
+ - Method 2 'insert'  
+   time complexity: O(1)  
+   space complexity: O(1)
+
+ - Method 3 'suffixes'  
    time complexity: O(m * n)  
    space complexity: O(m * n)
 
- - Method 3 '_suffixes_walk'  
+ - Method 4 '_suffixes_walk'  
    time complexity: O(m * n)  
    space complexity: O(m * n)
