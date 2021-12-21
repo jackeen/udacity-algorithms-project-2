@@ -30,7 +30,32 @@ algorithms:
 
 ## Space complexity
 
-Suppose the average length of word is n and the number of the word is m, the 
-space complexity is O(n * m). In practice, most of words is containing or 
+Suppose the average of length of word is n and the number of the word is m, 
+the space complexity is O(n * m). In practice, most of words is containing or 
 contained by others, so, it is father less then this evaluated result.
 
+## Modular complexity
+
+> supposed n and m is similar to previous part
+
+'Trie' complexity
+ - Method 1 'insert'  
+   time complexity: O(n)  
+   space complexity: O(1)
+
+ - Method 2 'find'  
+   time complexity: O(n)  
+   space complexity: O(1)
+
+'TrieNode' complexity
+ - Method 1 'insert'  
+   time complexity: O(1)  
+   space complexity: O(1)
+
+ - Method 2 'suffixes'  
+   time complexity: O(m * n)  
+   space complexity: O(m * n)
+
+ - Method 3 '_suffixes_walk'  
+   time complexity: O(m * n)  
+   space complexity: O(m * n)

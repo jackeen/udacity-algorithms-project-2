@@ -29,3 +29,35 @@ and growing with the length of level in path.
 
 On the other hand, if there are many relative path stored in the router, 
 and suppose the number of path is m, the space complexity much less then O(m). 
+
+
+## Modular complexity
+
+> supposed n is similar to previous part
+
+'Router' complexity
+ - Method 1 'add_handler'  
+   time complexity: O(n)  
+   space complexity: O(n)
+
+ - Method 2 'lookup'  
+   time complexity: O(n)  
+   space complexity: O(n)
+
+ - Method 3 'split_path'  
+   time complexity: O(1)  
+   space complexity: O(n)
+
+'RouterTrie' complexity
+ - Method 1 'insert'  
+   time complexity: O(n)  
+   space complexity: O(1)
+   
+ - Method 2 'find'  
+   time complexity: O(n)  
+   space complexity: O(1)
+
+'RouteTrieNode' complexity
+ - Method 1 'insert'  
+   time complexity: O(1)  
+   space complexity: O(1)
